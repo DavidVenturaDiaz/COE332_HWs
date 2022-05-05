@@ -1,7 +1,7 @@
 # Meteorite Landings Redis Database
 
 ## Overview
-The following repository contains the files required to set up a Redis database that contains the meteorite landings data. Paired with Flask, the user can also send POST and GET requests to interact with the database.
+The current repository contains the files required to set up a Redis database that contains the meteorite landings data. Paired with Flask, the user can also send POST and GET requests to interact with the database.
 
 ## Files 
 ### app.py
