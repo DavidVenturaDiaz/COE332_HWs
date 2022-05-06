@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meteorite-landings-redis-deployment
+  labels:
+    app: meteorite-landings
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: meteorite-landings
+  template:
+    metadata:
+      labels:
+        app: meteorite-landings
+    spec:
+      containers:
+        - name: meteorite-landings
+          imagePullPolicy: Always
+          image: davidventuradiaz/meteorite-landings
+          env:
+          - name: FLASK_APP
+            value: "app.py"
+          ports:
+          - name: http
+            containerPort: 5035
